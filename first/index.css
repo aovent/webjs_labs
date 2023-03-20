@@ -1,0 +1,27 @@
+/* hihi */
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+
+    background: grey;
+}
+
+body select {
+    background: black;
+    color: white;
+
+    border: solid 0.3vh white;
+    border-radius: 1vh;
+
+    padding: 1vh;
+
+    font-size: 3vh;
+
+    margin-top: 40vh;
+}
