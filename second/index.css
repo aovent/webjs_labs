@@ -1,3 +1,7 @@
+:root {
+    --back: rgb(99, 65, 0);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +9,7 @@
 }
 
 body {
-    background-color: grey;
+    background-color: var(--back);
     display: flex;
     justify-content: center;
 
@@ -30,44 +34,87 @@ main {
 }
 
 .squarecolor {
-    background: green;
+    background: black;
 }
 
 .fourSquares {
     display: flex;
     justify-content: center;
+    background: var(--back) !important;
 }
 
 .fourSquares .square {
     margin: 0px 1vh;
-    background: red;
+    background: black;
 }
 
 .calculator {
     background: black;
     border-radius: 30px;
 
-    height: 10vh !important;
-
-    margin: 3vh 0px;
+    margin: 1vh 10vh;
+    padding: 2vh 0vh;
 }
 
-.calculator .numbers button, .calculator .calc_buttons button {
-    background-color: orange;
+#calc_input {
+    background: orange;
+    border-radius: 3vh;
     border: 0px;
 
-    height: 3vh;
-    width: 3vh;
+    outline: none;
 
-    border-radius: 30px;
+    font-size: 2.6vh;
+}
+
+.menu {
+    margin: 2vh 0vh;
+}
+
+button {
+    background: orange;
+
+    border: 0px;
+    border-radius: 0.3vh;
+
+    padding: 0vh 0.5vh;
+}
+
+button:hover {
+    background: rgb(255, 186, 57);
     color: white;
+
+    transition: 0.2s;
 }
 
+input {
+    text-align: center;
 
-.calc_input {
-    margin-bottom: 3vh;
+    outline: none;
 
-    background: white;
-    border: 10px orange solid !important;
+    border: 0.3vh solid orange;
+    border-radius: 0.3vh;
+
+    margin: 0.3vh 0vh;
 }
 
+.menu button {
+    height: 2.5vh;
+    width: 2.5vh;
+
+    background: orange;
+
+    border: 0px;
+    border-radius: 3vh;
+
+    font-size: 1.6vh;
+}
+
+.calc__button__res {
+    background: white !important;
+}
+
+.calc__text {
+    color: white;
+    font-size: 2.4vh;
+    margin-bottom: 1.2vh;
+}
