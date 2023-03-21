@@ -79,6 +79,56 @@ eight.forEach(element => element.addEventListener("click", () => {
     element.style.cssText = "background: green;"
 }));
 
+// let eight = document.getElementById("fourSquares");
+// let selectedSquare;
+// eight.addEventListener("click", function(elem) {
+//     let square = elem.target;
+
+//     while (square != this) {
+//         if (square.tagName == 'TD') {
+//           highlight(target);
+//           return;
+//         }
+//         square = square.parentNode;
+//     }
+//     // console.log(elem)
+//     // console.log(elem.classList.add("test"))
+//     // elem.style.cssText = "background: green;"
+// })
+// function highlight(node) {
+//   if (selectedTd) {
+//     selectedTd.classList.remove("highlight");
+//   }
+//   selectedTd = node;
+//   selectedTd.classList.add("highlight");
+// }
+
+/* <script>
+    let table = document.getElementById('bagua-table');
+
+    let selectedTd;
+
+    table.onclick = function(event) {
+      let target = event.target;
+
+      while (target != this) {
+        if (target.tagName == 'TD') {
+          highlight(target);
+          return;
+        }
+        target = target.parentNode;
+      }
+    }
+
+    function highlight(node) {
+      if (selectedTd) {
+        selectedTd.classList.remove('highlight');
+      }
+      selectedTd = node;
+      selectedTd.classList.add('highlight');
+    }
+</script> */
+
 // 9. Реализовать калькулятор. Выводим 10 кнопок цифр от 0 до 10. Кнопки:
 // умножить, поделить, сложить, вычесть, вычислить. При нажатии на
 // кнопки в любом порядке выводиться в отдельном блоке строка (5-
@@ -105,4 +155,3 @@ document.querySelector(".calc__button__res").addEventListener("click", () => {
     let result = eval(input.value);
     input.value = result;
 });
-
