@@ -64,8 +64,8 @@ let color = document.querySelector(".squarecolor");
 eventarray.forEach((element) =>
   color.addEventListener(element, () => {
     element == eventarray[0]
-      ? (color.style.cssText = "background: red;")
-      : (color.style.cssText = "background: green;");
+      ? (color.style.cssText = "background: orange;")
+      : (color.style.cssText = "background: black;");
   })
 );
 
@@ -91,9 +91,9 @@ eventarray.forEach((element) =>
 let eight = document.getElementById("fourSquares");
 eight.addEventListener("click", (event) => {
   document.querySelectorAll(".squareID").forEach((element) => {
-    element.style.cssText = "background: red;";
+    element.style.cssText = "background: black;";
   });
-  event.target.style.backgroundColor = "green";
+  event.target.style.backgroundColor = "orange";
 });
 
 // 9. Реализовать калькулятор. Выводим 10 кнопок цифр от 0 до 10. Кнопки:
@@ -126,3 +126,7 @@ document.querySelector(".calc__button__res").addEventListener("click", () => {
   let result = eval(input.value);
   input.value = result;
 });
+
+document.querySelector(".clear__button").addEventListener("click", () => {
+  input.value = ""
+})
