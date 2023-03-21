@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+
+    user-select: none;
+}
+main {
+    text-align: center;
+    margin-top: 10vh;
+}
+
+.subsquare {
+    margin: 1vh 0px;
+
+    display: flex;
+    justify-content: center;
+}
+.square {
+    background-color: black;
+
+    height: 10vh;
+    width: 10vh;
+}
+
+.squarecolor {
+    background: green;
+}
+
+.fourSquares {
+    display: flex;
+    justify-content: center;
+}
+
+.fourSquares .square {
+    margin: 0px 1vh;
+    background: red;
+}
+
+.calculator {
+    background: black;
+    border-radius: 30px;
+
+    height: 10vh !important;
+
+    margin: 3vh 0px;
+}
+
+.calculator .numbers button, .calculator .calc_buttons button {
+    background-color: orange;
+    border: 0px;
+
+    height: 3vh;
+    width: 3vh;
+
+    border-radius: 30px;
+    color: white;
+}
+
+
+.calc_input {
+    margin-bottom: 3vh;
+
+    background: white;
+    border: 10px orange solid !important;
+}
+
