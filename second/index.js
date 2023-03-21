@@ -22,23 +22,25 @@ document.querySelector(".inpbtn2").addEventListener("click", () => {
 // 4. Выводим кнопку с текстом &quot;Поменять&quot; и два инпута, при клике на кнопку
 // инпуты меняются своим введеным текстом
 document.getElementById("button").addEventListener("click", () => {
-    let one = document.getElementById("t4one");
-    let two = document.getElementById("t4two");
-    let clear = one.value;
+  let one = document.getElementById("t4one");
+  let two = document.getElementById("t4two");
+  let clear = one.value;
 
-    one.value = two.value;
-    two.value = clear;
+  one.value = two.value;
+  two.value = clear;
 });
 
 // 5. Выводим две кнопки &quot;заблокировать&quot; и &quot;разблокировать&quot; и инпут. Одна из
 // них блокирует инпут с помощью атрибута disabled, а другая разблокирует
-array = ["blockbtn", "unblockbtn"]
+array = ["blockbtn", "unblockbtn"];
 let block = document.getElementById("disable");
 array.forEach((element) =>
   document.getElementById(element).addEventListener("click", () => {
-    element === array[0] ?  block.disabled = true : block.removeAttribute("disabled")
+    element === array[0]
+      ? (block.disabled = true)
+      : block.removeAttribute("disabled");
   })
-); 
+);
 
 // 6. Вывести любой квадрат и кнопку &quot;скрыть квадрат&quot;. Когда мы нажимаем
 // на скрыть, квадрат исчезает и текст кнопки меняется на &quot;показать
@@ -57,13 +59,15 @@ document.getElementById("squarebutton").addEventListener("click", () => {
 
 // 7. Выводим красный квадрат, при наведении на него он становиться
 // зеленым, а когда уводим курсор от него, обратно красным.
-eventarray = ["mouseover", "mouseleave"]
+eventarray = ["mouseover", "mouseleave"];
 let color = document.querySelector(".squarecolor");
-eventarray.forEach(element => color.addEventListener(element, () => {
+eventarray.forEach((element) =>
+  color.addEventListener(element, () => {
     element == eventarray[0]
       ? (color.style.cssText = "background: red;")
       : (color.style.cssText = "background: green;");
-}));
+  })
+);
 
 // 8. Вывести 4 красных квадрата, при клике на любой, он становиться
 // зеленым, при этом если есть уже зеленый квадрат, то он становиться
@@ -71,63 +75,26 @@ eventarray.forEach(element => color.addEventListener(element, () => {
 // зеленым, а старый зеленый квадрат обратно крассным и тд. (Сделать
 // задачу так, чтобы можно было добавить ещё хоть 100 квадратов при этом
 // скрипт не надо менять).
-let eight = document.querySelectorAll(".squareID");
-eight.forEach(element => element.addEventListener("click", () => {
-    eight.forEach(element => {
-        element.style.cssText = "background: red;"
-    })
-    element.style.cssText = "background: green;"
-}));
 
-// let eight = document.getElementById("fourSquares");
-// let selectedSquare;
-// eight.addEventListener("click", function(elem) {
-//     let square = elem.target;
+// 8.1
 
-//     while (square != this) {
-//         if (square.tagName == 'TD') {
-//           highlight(target);
-//           return;
-//         }
-//         square = square.parentNode;
-//     }
-//     // console.log(elem)
-//     // console.log(elem.classList.add("test"))
-//     // elem.style.cssText = "background: green;"
-// })
-// function highlight(node) {
-//   if (selectedTd) {
-//     selectedTd.classList.remove("highlight");
-//   }
-//   selectedTd = node;
-//   selectedTd.classList.add("highlight");
-// }
+// let eight = document.querySelectorAll(".squareID");
+// eight.forEach(element => element.addEventListener("click", () => {
+//     eight.forEach(element => {
+//         element.style.cssText = "background: red;"
+//     })
+//     element.style.cssText = "background: green;"
+// }));
 
-/* <script>
-    let table = document.getElementById('bagua-table');
+// 8.2
 
-    let selectedTd;
-
-    table.onclick = function(event) {
-      let target = event.target;
-
-      while (target != this) {
-        if (target.tagName == 'TD') {
-          highlight(target);
-          return;
-        }
-        target = target.parentNode;
-      }
-    }
-
-    function highlight(node) {
-      if (selectedTd) {
-        selectedTd.classList.remove('highlight');
-      }
-      selectedTd = node;
-      selectedTd.classList.add('highlight');
-    }
-</script> */
+let eight = document.getElementById("fourSquares");
+eight.addEventListener("click", (event) => {
+  document.querySelectorAll(".squareID").forEach((element) => {
+    element.style.cssText = "background: red;";
+  });
+  event.target.style.backgroundColor = "green";
+});
 
 // 9. Реализовать калькулятор. Выводим 10 кнопок цифр от 0 до 10. Кнопки:
 // умножить, поделить, сложить, вычесть, вычислить. При нажатии на
@@ -137,21 +104,25 @@ eight.forEach(element => element.addEventListener("click", () => {
 // вычислять с уже этим вычислением.
 calc__numbers = document.querySelectorAll(".calc__number");
 calc__buttons = document.querySelectorAll(".calc__button");
-input = document.getElementById("calc_input")
+input = document.getElementById("calc_input");
 
-calc__numbers.forEach(element => element.addEventListener("click", () => {
-    input.value += element.innerHTML
+calc__numbers.forEach((element) =>
+  element.addEventListener("click", () => {
+    input.value += element.innerHTML;
 
-    return input.value
-}));
+    return input.value;
+  })
+);
 
-calc__buttons.forEach((element) => element.addEventListener("click",() => {
-    input.value += element.innerHTML
+calc__buttons.forEach((element) =>
+  element.addEventListener("click", () => {
+    input.value += element.innerHTML;
 
-    return input.value
-}));
+    return input.value;
+  })
+);
 
 document.querySelector(".calc__button__res").addEventListener("click", () => {
-    let result = eval(input.value);
-    input.value = result;
+  let result = eval(input.value);
+  input.value = result;
 });
