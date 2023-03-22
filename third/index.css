@@ -1,0 +1,60 @@
+/* Параметры выравнивания */
+
+body {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+
+    
+}
+
+input {
+    
+    outline: none;
+    text-align: center;
+}
+
+main {
+    margin-top: 1vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.elem {
+    margin-bottom: 1vh;
+    font-size: 3vh;
+}
+
+.first__task {
+    text-align: center;
+    margin-bottom: 5vh;
+}
+
+/* Остальное */
+:root {
+    --main-color: orange;
+    --back: rgb(99, 65, 0);
+    --text: #ffffff;
+}
+
+body {background: var(--back); color: var(--text);}
+
+button, input, .f__tZero, h2, h1 {
+    text-align: center;
+    border: 0.3vh solid var(--main-color);
+    background: black;
+    color: var(--text);
+
+    padding: 0.5vh;
+    border-radius: 1.2vh;
+}
+
+
+button:hover, button:active {
+    background: white;
+    color: black;
+
+    transition: 0.3s;
+}
