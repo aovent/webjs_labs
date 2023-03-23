@@ -34,7 +34,7 @@ frombutton.addEventListener("click", (event) => {
     
     
     firstbutton.innerHTML = "Удалить"
-    secondbutton.innerHTML = "Готов"    
+    secondbutton.innerHTML = "Готово"    
     
     let blocks = document.querySelectorAll(".itemblock");
     manageBlock(blocks);
