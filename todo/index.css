@@ -1,0 +1,73 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    outline: none;
+    user-select: none;
+
+    background: orange;
+
+    display: flex;
+    justify-content: center;
+
+    font-size: 2vh;
+}
+
+.todo {
+    background: orange;
+    color: black;
+    padding: 0.5vh;
+}
+
+input, button {
+    outline: none;
+    
+    background: white;
+    color: black;
+
+    text-align: center;
+
+    border: 0.3vh solid black;
+    border-radius: 0.5vh;
+
+    padding: 0.5vh;
+
+    font-size: 1.5vh;
+}
+
+.itemblock {
+    border: 1px solid orange;
+    border-radius: 0.5vh;
+
+    margin-top: 3vh;
+
+    display: flex;
+}
+.buttons {
+    margin-left: auto;
+}
+
+.item {
+    padding-top: 0.4vh;
+    padding-left: 1vh;
+}
+
+button:hover {
+    background: black;
+    color: white;
+
+    transition: 0.1s;
+}
+
+button:active {
+    background: orange;
+
+    transition: 0.3s;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
